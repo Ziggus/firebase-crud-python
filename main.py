@@ -10,8 +10,10 @@ pokeDb = db.reference("pokemon")
 sg.change_look_and_feel('Light Blue 3') # GUI color
 
 def Create(pokeHeight, pokeId, pokeImgUrl, pokeName, pokeNum, pokeType, pokeWeakness, pokeWeight):
-    pokeId = int(pokeId) # need to convert string to int for searches to work
-    pokeNum = int(pokeNum) # need to convert string to int for searches to work
+    if pokeId:
+        pokeId = int(pokeId) # need to convert string to int for searches to work
+    if pokeNum:
+        pokeNum = int(pokeNum) # need to convert string to int for searches to work
     tempPokemon={
                         "height" : pokeHeight,
                         "id" : pokeId,
@@ -47,8 +49,10 @@ def Read(pokeHeight, pokeId, pokeImgUrl, pokeName, pokeNum, pokeType, pokeWeakne
         print("Not in DB")
 
 def Update(pokeHeight, pokeId, pokeImgUrl, pokeName, pokeNum, pokeType, pokeWeakness, pokeWeight):
-    pokeId = int(pokeId) # need to convert string to int for searches to work
-    pokeNum = int(pokeNum) # need to convert string to int for searches to work
+    if pokeId:
+        pokeId = int(pokeId) # need to convert string to int for searches to work
+    if pokeNum:
+        pokeNum = int(pokeNum) # need to convert string to int for searches to work
     tempPokemon={
                         "height" : pokeHeight,
                         "id" : pokeId,
